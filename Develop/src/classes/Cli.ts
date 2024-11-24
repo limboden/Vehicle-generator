@@ -82,7 +82,7 @@ class Cli {
           default:
             this.createCar();
         }
-        // TODO: add statements to create a truck or motorbike if the user selects the respective vehicle type
+        // TODO: add statements to create a truck or motorbike if the user selects the respective vehicle type DONE
       });
   }
 
@@ -183,6 +183,18 @@ class Cli {
         },
       ])
       .then((answers) => {
+        const car = new Truck(
+          // TODO: The generateVin method is static and should be called using the class name Cli, make sure to use Cli.generateVin() for creating a truck and motorbike as well!
+          Cli.generateVin(),
+          answers.color,
+          answers.make,
+          answers.model,
+          parseInt(answers.year),
+          parseInt(answers.weight),
+          parseInt(answers.topSpeed),
+          [],
+          answers.towingCapacity
+        );
         // TODO: Use the answers object to pass the required properties to the Truck constructor
         // TODO: push the truck to the vehicles array
         // TODO: set the selectedVehicleVin to the vin of the truck
