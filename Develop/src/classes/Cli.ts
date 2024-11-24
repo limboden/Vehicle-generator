@@ -202,8 +202,6 @@ class Cli {
         this.selectedVehicleVin = truck.vin;
         // TODO: perform actions on the truck
         this.performActions();
-
-
       });
   }
 
@@ -278,7 +276,7 @@ class Cli {
 
   // method to find a vehicle to tow
   // TODO: add a parameter to accept a truck object
-  findVehicleToTow(): void {
+  findVehicleToTow(truck: Truck): void {
     inquirer
       .prompt([
         {
