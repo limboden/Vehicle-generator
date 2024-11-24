@@ -298,12 +298,8 @@ class Cli {
           console.log("the truck cannot tow itself.")
         } else {
           // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
-          for (let i = 0; i < this.vehicles.length; i++) {
-            if (this.vehicles[i].vin === this.selectedVehicleVin) {
-              const currentVehicle = this.vehicles[i];
-
-            }
-          }
+          truck.tow(answers.vehicleToTow)
+          this.performActions()
 
         }
       });
