@@ -183,7 +183,7 @@ class Cli {
         },
       ])
       .then((answers) => {
-        const car = new Truck(
+        const truck = new Truck(
           // TODO: The generateVin method is static and should be called using the class name Cli, make sure to use Cli.generateVin() for creating a truck and motorbike as well!
           Cli.generateVin(),
           answers.color,
@@ -196,6 +196,7 @@ class Cli {
           answers.towingCapacity
         );
         // TODO: Use the answers object to pass the required properties to the Truck constructor
+        this.vehicles.push(truck)
         // TODO: push the truck to the vehicles array
         // TODO: set the selectedVehicleVin to the vin of the truck
         // TODO: perform actions on the truck
