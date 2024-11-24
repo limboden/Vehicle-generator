@@ -201,6 +201,8 @@ class Cli {
         // TODO: set the selectedVehicleVin to the vin of the truck
         this.selectedVehicleVin = truck.vin;
         // TODO: perform actions on the truck
+        this.performActions();
+
 
       });
   }
