@@ -299,9 +299,8 @@ class Cli {
         } else {
           // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
           truck.tow(answers.vehicleToTow)
-          this.performActions()
-
         }
+        this.performActions()
       });
   }
 
@@ -408,7 +407,6 @@ class Cli {
               if (this.vehicles[i] instanceof Motorbike) {
                 const bike = this.vehicles[i] as Motorbike
                 bike.wheelie();
-                return;
               }
 
             }
